@@ -1,5 +1,4 @@
 
-.gitignore
 .idea/
 out/
 .out/
@@ -7,3 +6,5 @@ out/
 lib/
 src/test/
 target/
+web.iml
+
