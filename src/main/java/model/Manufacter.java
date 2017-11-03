@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+
 @Table(name = "manufacter",catalog = "management")
 public class Manufacter {
     @Id

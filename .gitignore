@@ -1,10 +1,7 @@
 
 .idea/
 out/
-.out/
 .class
 lib/
 src/test/
 target/
-web.iml
-
