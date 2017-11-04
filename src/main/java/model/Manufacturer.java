@@ -6,7 +6,7 @@ import java.util.Set;
 @Entity
 
 @Table(name = "manufacter",catalog = "management")
-public class Manufacter {
+public class Manufacturer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,7 +17,7 @@ public class Manufacter {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "manufacter")
     private Set<Product> products;
 
-    public Manufacter() {
+    public Manufacturer() {
 
     }
 

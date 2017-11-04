@@ -34,7 +34,7 @@
         </property>
 
         <!-- List of Entities mapping files -->
-        <mapping class="model.Manufacter"/>
+        <mapping class="model.Manufacturer"/>
         <mapping class="model.Product"/>
 
     </session-factory>

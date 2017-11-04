@@ -8,12 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <title>CRUD JSP</title>
 </head>
   <body>
     <title>WebCRUD</title>
       <a href="pages/Products.jsp">Products</a>
     <br>
-      <a href="pages/Manufacteres.jsp">Manufateres</a>
+      <a href="pages/Manufacturers.jsp">Manufateres</a>
   </body>
 </html>

@@ -21,7 +21,7 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "manufacter_id", nullable = false)
-    private Manufacter manufacter;
+    private Manufacturer manufacturer;
 
     public Product() {
     }
@@ -58,12 +58,12 @@ public class Product {
         this.price = price;
     }
 
-    public Manufacter getManufacter() {
-        return manufacter;
+    public Manufacturer getManufacturer() {
+        return manufacturer;
     }
 
-    public void setManufacter(Manufacter manufacter) {
-        this.manufacter = manufacter;
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     @Override
@@ -73,7 +73,7 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", manufacter=" + manufacter +
+                ", manufacturer=" + manufacturer +
                 '}';
     }
 }
