@@ -11,16 +11,9 @@
   <title>CRUD JSP</title>
 </head>
   <body>
-
-<a href="../src/main/webapp/addProduct.jsp">Add new Product</a>
-<table cellpadding="2" cellspacing="2" border="1">
-  <tr>
-    <th>ID</th>
-    <th>NAME</th>
-    <th>PRICE</th>
-    <th>MANUFACTER</th>
-  </tr>
-
-    </table>
+    <title>WebCRUD</title>
+      <a href="pages/Products.jsp">Products</a>
+    <br>
+      <a href="pages/Manufacteres.jsp">Manufateres</a>
   </body>
 </html>
