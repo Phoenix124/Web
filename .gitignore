@@ -5,3 +5,5 @@ out/
 lib/
 src/test/
 target/
+*.iml
+classes/
