@@ -50,7 +50,7 @@ public class ProductController extends HttpServlet {
         Product product = new Product();
         product.setName(request.getParameter("firstName"));
         product.setPrice(Integer.parseInt(request.getParameter("lastName")));
-        product.setManufacturer(request.getParameter(String.valueOf(product.getManufacturer())));
+        //product.setManufacturer(request.getParameter(String.valueOf(product.getManufacturer())));
         product.setDescription(request.getParameter("email"));
         String productId = request.getParameter("productId");
         if (productId == null || productId.isEmpty()) {
