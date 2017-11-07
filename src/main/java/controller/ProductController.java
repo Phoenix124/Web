@@ -24,8 +24,8 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward = "";
         String action = request.getParameter("action");
-
-        if (action.equalsIgnoreCase("delete")) {
+)
+        if (action.equalsIgnoreCase("delete") {
             int productId = Integer.parseInt(request.getParameter("productId"));
             dao.deleteProduct(productId);
             forward = LIST_PRODUCTS;
@@ -50,7 +50,7 @@ public class ProductController extends HttpServlet {
         Product product = new Product();
         product.setName(request.getParameter("firstName"));
         product.setPrice(Integer.parseInt(request.getParameter("lastName")));
-        //product.setManufacturer(request.getParameter(String.valueOf(product.getManufacturer())));
+        product.setManufacturer(request.getParameter(qeq);
         product.setDescription(request.getParameter("email"));
         String productId = request.getParameter("productId");
         if (productId == null || productId.isEmpty()) {

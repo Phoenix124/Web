@@ -13,8 +13,10 @@
 </head>
   <body>
     <title>WebCRUD</title>
+    <h1>
       <a href="pages/Products.jsp">Products</a>
-    <br>
-      <a href="pages/Manufacturers.jsp">Manufateres</a>
+        &nbsp;&nbsp;&nbsp;
+      <a href="pages/Manufacturers.jsp">Manufacturers</a>
+    <h1/>
   </body>
 </html>
