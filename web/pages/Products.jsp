@@ -1,16 +1,25 @@
+<%@ page import="model.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="dao.ProductDAO" %>
+<%@ page import="dao.ProductDAOImpl" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Prducts</title>
+    <title>Products</title>
 </head>
 <body>
 <center>
     <h1>Products</h1>
     <h2>
-        <a href="addProduct.jsp">Add New Product</a>
+        <a href="ProductForm.jsp">Add New Product</a>
     </h2>
+<%
+    ProductDAOImpl dao = new ProductDAOImpl();
+    List<Product> products = dao.getAll();
+    request.setAttribute("products", products);
+%>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
@@ -22,16 +31,16 @@
             <th>Manufacturer</th>
             <th>Action</th>
         </tr>
-        <c:forEach var="products" items="${product}">
+        <c:forEach items="${products}" var="product">
             <tr>
-                <td><c:out value="${products.id}" /></td>
-                <td><c:out value="${products.name}" /></td>
-                <td><c:out value="${products.price}" /></td>
-                <td><c:out value="${products.manufacturer}" /></td>
+                <td><c:out value="${product.id}" /></td>
+                <td><c:out value="${product.name}" /></td>
+                <td><c:out value="${product.price}" /></td>
+                <td><c:out value="${product.manufacturer}" /></td>
                 <td>
-                    <a href="/edit?id=<c:out value='${products.id}' />">Edit</a>
+                    <a href="<c:url value="/pages/editFormProduct.jsp?id=<c:out value='${product.id}' />"/>">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/delete?id=<c:out value='${products.id}' />">Delete</a>
+                    <a href="<c:url value="/pages/deleteProduct.jsp?id=<c:out value='${product.id}' />"/>">Delete</a>
                 </td>
             </tr>
         </c:forEach>

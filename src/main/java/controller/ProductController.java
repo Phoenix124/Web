@@ -1,6 +1,7 @@
 package controller;
 
 import dao.ProductDAOImpl;
+import model.Manufacturer;
 import model.Product;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductController extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -24,8 +27,8 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward = "";
         String action = request.getParameter("action");
-)
-        if (action.equalsIgnoreCase("delete") {
+
+        if (action.equalsIgnoreCase("delete")) {
             int productId = Integer.parseInt(request.getParameter("productId"));
             dao.deleteProduct(productId);
             forward = LIST_PRODUCTS;
@@ -50,8 +53,8 @@ public class ProductController extends HttpServlet {
         Product product = new Product();
         product.setName(request.getParameter("firstName"));
         product.setPrice(Integer.parseInt(request.getParameter("lastName")));
-        product.setManufacturer(request.getParameter(qeq);
-        product.setDescription(request.getParameter("email"));
+        //product.setManufacturer(request.getParameter();
+        product.setDescription(request.getParameter("description"));
         String productId = request.getParameter("productId");
         if (productId == null || productId.isEmpty()) {
             dao.addProduct(product);
