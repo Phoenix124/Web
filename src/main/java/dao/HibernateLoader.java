@@ -12,7 +12,6 @@ public class HibernateLoader  {
      * @return SessionFactory object
      */
     static {
-
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
     /**
