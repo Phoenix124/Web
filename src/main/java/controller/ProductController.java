@@ -54,7 +54,6 @@ public class ProductController extends HttpServlet {
         product.setName(request.getParameter("firstName"));
         product.setPrice(Integer.parseInt(request.getParameter("lastName")));
         //product.setManufacturer(request.getParameter();
-        product.setDescription(request.getParameter("description"));
         String productId = request.getParameter("productId");
         if (productId == null || productId.isEmpty()) {
             dao.addProduct(product);

@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ManufacterController extends HttpServlet {
+public class ManufacturerController extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "web/pages/Products.jsp";
     private static String LIST_MMANUFACTERES = "web/pages/Manufacteres.JSP";
     private ManufacturerDAOImpl dao;
 
-    public ManufacterController() {
+    public ManufacturerController() {
         super();
         dao = new ManufacturerDAOImpl();
     }

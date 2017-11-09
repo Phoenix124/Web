@@ -13,14 +13,13 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "price")
     private double price;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "manufacter_id", nullable = false)
+    @JoinTable(name = "manufacturer_products",
+            joinColumns = @JoinColumn(name = "manufaturer_id",referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id",referencedColumnName = "id"))
     private Manufacturer manufacturer;
 
     public Product() {
@@ -40,14 +39,6 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public double getPrice() {
@@ -71,7 +62,6 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
                 ", price=" + price +
                 ", manufacturer=" + manufacturer +
                 '}';

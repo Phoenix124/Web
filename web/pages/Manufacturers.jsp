@@ -12,7 +12,7 @@
 <center>
     <h1>Manufaturers</h1>
     <h2>
-        <a href="ManufacturerForm.jsp">Add New Manufaturer</a>
+        <a href="ManufacturerForm.jsp">Add New Manufacturer</a>
     </h2>
     <%
         ManufacturerDAOImpl dao = new ManufacturerDAOImpl();

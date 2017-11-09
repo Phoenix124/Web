@@ -18,9 +18,9 @@
                     <%
                     Connection con = null;
                     PreparedStatement ps = null;
-                    try
-                    {
-                    Class.forName(driverName).newInstance();;
+                    try{
+
+                    Class.forName(driverName).newInstance();
                     con = DriverManager.getConnection(url,user,psw);
                     String sql = "SELECT * FROM manufacturer";
                     ps = con.prepareStatement(sql);
@@ -31,18 +31,16 @@
                             <%
                             while(rs.next())
                             {
-                            String fname = rs.getString("firstname");
+                            String name = rs.getString("name");
                             %>
-                            <option value="<%=fname %>"><%=fname %></option>
+                            <option value="<%=name%>"><%=name%></option>
                             <%
                             }
                             %>
                         </select>
                     </p>
                     <%
-                    }
-                    catch(SQLException e)
-                    {
+                    }catch(SQLException e){
                     System.out.println(e);
                     }
                     %>

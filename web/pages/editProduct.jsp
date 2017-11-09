@@ -14,6 +14,7 @@
         ProductDAOImpl dao = new ProductDAOImpl();
         dao.updateProduct(p);
         response.sendRedirect("Products.jsp");
+        System.out.println("Product added!");
     }catch (Exception e){
         e.getMessage();
         System.out.println("Error!");

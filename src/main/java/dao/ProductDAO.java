@@ -2,7 +2,7 @@ package dao;
 
 import model.Product;
 
-import java.util.List;
+import java.util.Set;
 
 public interface ProductDAO {
 
@@ -14,6 +14,6 @@ public interface ProductDAO {
 
     void deleteProduct(int id);
 
-    List<Product> getAll();
+    Set<Product> getAll();
 
 }

@@ -12,7 +12,7 @@ public class ManufacturerDAOImpl implements ManufacturerDAO {
     private static final Logger logger = LoggerFactory.getLogger(ManufacturerDAOImpl.class);
 
     public void addManufacter(Manufacturer manufacturer) {
-        Session session = HibernateLoader.getSessionFactory().getCurrentSession();
+        Session session = dao.HibernateLoader.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         session.save(manufacturer);
         session.flush();
@@ -21,7 +21,7 @@ public class ManufacturerDAOImpl implements ManufacturerDAO {
     }
 
     public Manufacturer getById(int id) {
-        Session session = HibernateLoader.getSessionFactory().getCurrentSession();
+        Session session = dao.HibernateLoader.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         Manufacturer manufacturer = session.get(Manufacturer.class, id);
         if (manufacturer != null) {
@@ -33,7 +33,7 @@ public class ManufacturerDAOImpl implements ManufacturerDAO {
     }
 
     public void updateManufacter(Manufacturer manyfacter) {
-        Session session = HibernateLoader.getSessionFactory().getCurrentSession();
+        Session session = dao.HibernateLoader.getSessionFactory().getCurrentSession();
         session.beginTransaction();
 
         session.update(manyfacter);
@@ -42,7 +42,7 @@ public class ManufacturerDAOImpl implements ManufacturerDAO {
     }
 
     public void deleteManufacter(int id) {
-        Session session = HibernateLoader.getSessionFactory().getCurrentSession();
+        Session session = dao.HibernateLoader.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         Manufacturer manufacturer = session.get(Manufacturer.class, id);
         if (manufacturer != null) {
@@ -53,7 +53,7 @@ public class ManufacturerDAOImpl implements ManufacturerDAO {
     }
 
     public List<Manufacturer> getAll() {
-        Session session = HibernateLoader.getSessionFactory().getCurrentSession();
+        Session session = dao.HibernateLoader.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Manufacturer> list = session.createQuery("from Manufacter ", Manufacturer.class).list();
         for (Manufacturer manufacturer : list) {

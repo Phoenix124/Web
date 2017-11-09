@@ -5,7 +5,7 @@ import java.util.Set;
 
 @Entity
 
-@Table(name = "manufacter",catalog = "management")
+@Table(name = "manufacturer",catalog = "management")
 public class Manufacturer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +14,7 @@ public class Manufacturer {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "manufacter")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "manufacturer")
     private Set<Product> products;
 
     public Manufacturer() {
